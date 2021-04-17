@@ -8,7 +8,7 @@ on:
 jobs:
   build-sks-hello:
     name: Build mpc-os image
-    runs-on: ubuntu-16.04
+    runs-on: ubuntu-18.04
 
     steps:
       - name: Checkout code
@@ -16,12 +16,10 @@ jobs:
 
       - name: Install dependencies
         run: >
-          sudo cp ./xxd /usr/bin/xxd &&
-          sudo apt-get install --no-install-recommends
-          git vim parted
-          quilt coreutils qemu-user-static debootstrap zerofree zip dosfstools
-          bsdtar libcap2-bin rsync grep udev xz-utils curl file kmod bc
-          binfmt-support ca-certificates qemu-utils kpartx
+          sudo apt-get install
+          coreutils quilt parted qemu-user-static debootstrap zerofree zip
+          dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl bc
+          qemu-utils kpartx
 
 
       - name: Build image
