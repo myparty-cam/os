@@ -17,9 +17,9 @@ jobs:
       - name: Install dependencies
         run: >
           sudo apt-get install
-            coreutils quilt parted qemu-user-static debootstrap zerofree zip
-            dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl bc
-            qemu-utils kpartx
+          coreutils quilt parted qemu-user-static debootstrap zerofree zip
+          dosfstools bsdtar libcap2-bin grep rsync xz-utils file git curl bc
+          qemu-utils kpartx
 
       - name: Build image
         run: ./build.sh
