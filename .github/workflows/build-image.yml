@@ -22,7 +22,7 @@ jobs:
           qemu-utils kpartx
 
       - name: Build image
-        run: ./build.sh
+        run: sudo build.sh
 
       - name: Release image
         uses: softprops/action-gh-release@v1
