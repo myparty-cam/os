@@ -16,7 +16,7 @@ jobs:
 
       - name: Install dependencies
         run: >
-          cp ./xxd /usr/bin/xxd &&
+          sudo cp ./xxd /usr/bin/xxd &&
           sudo apt-get install --no-install-recommends
           git vim parted
           quilt coreutils qemu-user-static debootstrap zerofree zip dosfstools
