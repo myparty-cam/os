@@ -1,0 +1,29 @@
+name: Build mpc-os image
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build-sks-hello:
+    name: Build mpc-os image
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build image
+        run: ./build-docker.sh
+
+      - name: Release image
+        uses: softprops/action-gh-release@v1
+
+        with:
+          draft: false
+          prerelease: false
+          files: ./deploy/*.zip
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
