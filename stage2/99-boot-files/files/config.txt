@@ -5,7 +5,7 @@ disable_splash=1
 dtoverlay=pi3-disable-bt
 
 #Disable Wifi
-dtoverlay=pi3-disable-wifi
+# dtoverlay=pi3-disable-wifi
  
 # Overclock the SD Card from 50 to 100MHz
 # This can only be done with at least a UHS Class 1 card
