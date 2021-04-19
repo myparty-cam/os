@@ -1,4 +1,3 @@
-export USE_QEMU=0
 export IMG_NAME=mpc-os
 export RELEASE=buster
 export DEPLOY_ZIP=1
