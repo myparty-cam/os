@@ -1,0 +1,6 @@
+git automake
+autoconf pkg-config
+autopoint gettext
+libtool build-essential
+libusb-1.0-0 libusb-1.0-0-dev
+libexif-dev
